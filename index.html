@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI for the Messy Middle | Patch Gloucester x Boom Training</title>
+<meta name="description" content="Practical AI workflows for small teams. The prompts, the tool guide and a free download from the AI at Lunch session at Patch Gloucester, 25 June 2026.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI for the Messy Middle">
+<meta property="og:description" content="Practical AI workflows for founders, freelancers and small teams. Prompts, tool guide and a free download.">
+<meta property="og:image" content="https://jaikharbanda.github.io/patch-ai-lunch/og.png">
+<meta property="og:url" content="https://jaikharbanda.github.io/patch-ai-lunch/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI for the Messy Middle">
+<meta name="twitter:description" content="Practical AI workflows for small teams. Prompts, tool guide and a free download.">
+<meta name="twitter:image" content="https://jaikharbanda.github.io/patch-ai-lunch/og.png">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAACdUlEQVR4nO2Z3W7TMBSAbefHGV2TFLFJIE0IENOmVVPHrnkSnoMbbrmCJ+ICXgAE0gRDdOwOCWmbtvW/SdbUu0FVYreNah90NMnfXU/snPPVJ7Gr0s1nL8ldhmEXYIoVwMYKYGMFsLEC2FgBbKwANndewAW81/3t1w7fVONXJ+/z9KJi7s4bx2sUI6PzT8OzD5VJwVbAXduaWz0hJIgPobKogAkEjYVV8sYLQihUIgkgAerwqLXoouM1vNpTmEQKMAK8vsPc2pIBS9bHECCBqvp4tE+ZB5JLAkCAOmt+fbcYEdM07X4vjWHcD5vmuVQABIK4RWnpdZz1jpPOV2XYf+kiAAGuVJZ0j276bTFNikF//TlzQ/N0EqYCDn/g3XtcjIg8yfptISZp72dpKGVBfGCYTsVUQG2MtPeDiJwQknaPpEuVz7oGhgJU7Z9Z3Vm/LfJSF7nBQzd4ZJZRxkjAqz1x/NIBRuSjbPB79iHtHUtTwDcEIwG1mln//PuodlF8QCjkEVj/XpS6PNyXgmmnVHE2OBH5uJTPrfvr29pJVfQF/KhJnaAYmU6G2fC0NGhuF4FuCPq/B9Q6mFvbaL6rnOiHe5QF0i6hjeYKmHQCZR6P5N7TRlPA8FkEfBdpFmFYgfr+1UZHAGI/mrMD6qHzEKtfv8jHl7/eiunNoinh1iset0o3iQ9H5x81skusvgKUceVMlnS+LameEJJcf5Yi6ilQj5UF5p6Kkyu5PolscJpnl1IQ5Gy3soD6+p+M/0ySv1XzRHL9Rb5V1CLUWbUACWr/J0bGCmBjBbCxAthYAWysADZWABsrgI0VwMYKYGMFsLEC2NwCpPWY7HbhHGcAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233D; --ink2:#34425f; --bg:#FAF7F2; --card:#FFFFFF;
+  --blue:#2B50C8; --blue-d:#21409e; --coral:#E8643C; --line:#e7e1d6;
+  --muted:#6b7488;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12;letter-spacing:-.01em}
+a{color:var(--blue)}
+.kicker{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9DB2E8}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;padding:34px 0 40px}
+.lockup{display:flex;align-items:center;gap:14px;font-weight:700;font-size:.95rem;color:#cdd6e8;flex-wrap:wrap}
+.lockup .div{width:1px;height:20px;background:#46557a}
+.lockup .sub{font-weight:500;color:#8c9bbd;font-size:.82rem}
+.hero h1{font-size:clamp(2.5rem,9vw,4rem);margin:18px 0 10px;color:#fff}
+.hero p.lead{font-size:1.12rem;color:#d7deec;margin:0 0 22px;max-width:34ch}
+.meta{display:inline-flex;gap:8px;flex-wrap:wrap;font-weight:600;color:#cdd6e8;font-size:.95rem}
+.meta span{background:#22304d;padding:6px 12px;border-radius:999px}
+.scan{margin-top:26px;display:flex;gap:16px;align-items:center;background:#1d2b47;border:1px solid #2f3e60;
+  border-radius:14px;padding:14px 16px}
+.scan img{width:96px;height:96px;border-radius:8px;background:#fff;padding:6px}
+.scan p{margin:0;font-size:.92rem;color:#cdd6e8}
+.scan strong{color:#fff}
+
+/* quick links */
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:-22px auto 0;position:relative;z-index:2}
+.quick a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 14px;
+  text-decoration:none;color:var(--ink);font-weight:600;box-shadow:0 6px 18px rgba(22,35,61,.06);text-align:center}
+.quick a span{display:block;font-size:.78rem;color:var(--muted);font-weight:500;margin-top:3px}
+
+section{padding:38px 0}
+section h2{font-size:1.8rem;margin:0 0 6px}
+.lede{color:var(--ink2);margin:0 0 22px;max-width:60ch}
+
+.takeaways{display:grid;gap:12px;margin-top:18px}
+.takeaways div{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);
+  border-radius:10px;padding:14px 16px;font-weight:600}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px;
+  box-shadow:0 4px 14px rgba(22,35,61,.04)}
+.card h3{font-size:1.18rem;margin:0 0 4px}
+.card .when{color:var(--muted);margin:0 0 12px;font-size:.92rem}
+.codewrap{position:relative}
+pre{background:#0f1830;color:#e8ecf6;border-radius:10px;padding:16px 16px;overflow-x:auto;
+  font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:.86rem;line-height:1.5;margin:0;white-space:pre-wrap}
+.copy{position:absolute;top:10px;right:10px;background:var(--blue);color:#fff;border:0;border-radius:8px;
+  padding:6px 12px;font-weight:600;font-size:.8rem;cursor:pointer}
+.copy.done{background:#2e9e6b}
+
+.pattern pre{background:#0f1830}
+
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th[scope=row]{text-align:left;width:34%;padding:14px 16px;border-bottom:1px solid var(--line);
+  background:#f3eee5;font-family:Fraunces,serif;font-size:1.02rem}
+td{padding:14px 16px;border-bottom:1px solid var(--line);color:var(--ink2)}
+tr:last-child th,tr:last-child td{border-bottom:0}
+
+.downloads{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dl{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:left}
+.dl h3{margin:0 0 6px;font-size:1.1rem}
+.dl p{margin:0 0 14px;color:var(--muted);font-size:.9rem}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;
+  padding:11px 18px;border-radius:10px}
+.btn:hover{background:var(--blue-d)}
+.btn.ghost{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+
+.cta{background:var(--ink);color:#fff;border-radius:18px;padding:28px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.cta .txt{flex:1;min-width:260px}
+.cta h2{color:#fff;margin:0 0 8px}
+.cta p{color:#d7deec;margin:0 0 16px}
+.cta .btn.coral{background:var(--coral)}
+.cta .btn.coral:hover{background:#cf4f29}
+.cta .qr{text-align:center}
+.cta .qr img{width:120px;height:120px;background:#fff;padding:8px;border-radius:10px}
+.cta .qr span{display:block;font-size:.78rem;color:#9DB2E8;margin-top:6px}
+
+.afternoon{background:#f3eee5;border-radius:14px;padding:22px}
+.afternoon ol{margin:10px 0 0;padding-left:20px}
+.afternoon li{margin-bottom:6px}
+
+footer{background:var(--ink);color:#aab6cf;padding:30px 0;font-size:.9rem}
+footer strong{color:#fff}
+footer a{color:#cdd6e8}
+.calbtn{margin-top:14px}
+@media(max-width:620px){
+  .quick{grid-template-columns:1fr}
+  .downloads{grid-template-columns:1fr}
+  .cta{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="lockup">
+      <span>Patch Gloucester</span><span class="div"></span>
+      <span>Boom Training <span class="sub">part of Turing College</span></span>
+    </div>
+    <div class="kicker" style="margin-top:22px">AI at Lunch</div>
+    <h1>AI for the Messy Middle</h1>
+    <p class="lead">Practical AI workflows for founders, freelancers and small teams. Turn rough notes, half-written drafts and vague plans into useful work, using ChatGPT, Copilot or Claude.</p>
+    <div class="meta"><span>Thursday 25 June 2026</span><span>12:00</span><span>Patch Gloucester, The Forum</span></div>
+    <div class="scan">
+      <img src="data:image/png;base64,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nXc0c0vMzmNnXtX73Jr5cSoEkEIAKQRICgGSQoCkECApBEgKAZJCgOrH5/O5fQ1/2K370Xecm1U492ncuuadZz7niZtP1t63vWTnW3AqBJBCACkESAoBkkKApBAgKQRICgGSQoAu7jZZOzcj8cT9JDO/hZlTEDMnc27tNpn5u5rJqRBACgGkECApBEgKAZJCgKQQICkESAoB+jptMnNPyMztFjM9cQ/MTLfmhc59R7f2scx8XadCACkEkEKApBAgKQRICgGSQoCkECApBGjsbpNzbs1XnNtQsfO6t575fVtTdsyc+bm1B2bt3C/HqRBACgGkECApBEgKAZJCgKQQICkESAoB+jptsvbEu+R3nNtusX7mc3f235r6OHdVtz7nW9d8zszXPfdZORUCSCGAFAIkhQBJIUBSCJAUAiSFAEkhQJvTJmu3pj7OPfPMbQ9rtyYo3vfMO697zs47et/mop3/UKdCACkEkEKApBAgKQRICgGSQoCkECApBOjotAm/d26bx63JjSc6NxF0a3LjiVMuO8987tfuVAgghQBSCJAUAiSFAEkhQFIIkBQCJIUAmTb5D+e2l8x87MztFre2xMzcmXNr08v6se/bTuNUCCCFAFIIkBQCJIUASSFAUgiQFAIkhQDVj8/ns/jzuemLc85d87k73d+322TmNb/v07g1m/G+iSCnQgApBJBCgKQQICkESAoBkkKApBAgKQRoc7fJzM0YM82czJm5++LcJpBbO0Z23PrlzJzL2nnd9TtyKgSQQgApBEgKAZJCgKQQICkESAoBkkKAvu42AfgVOBUCSCGAFAIkhQBJIUBSCJAUAiSFAEkhQPVv4MC2KN8BsaMAAAAASUVORK5CYII=" alt="QR code to this page">
+      <p><strong>Viewing this on the screen?</strong><br>Scan to open it on your phone and keep the prompts.</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="quick">
+    <a href="#pattern">The prompt pattern<span>One shape, any tool</span></a>
+    <a href="#workflows">Five workflows<span>Copy-paste ready</span></a>
+    <a href="#download">Free download<span>The Messy Middle skill</span></a>
+  </nav>
+</div>
+
+<section id="session"><div class="wrap">
+  <h2>This session</h2>
+  <p class="lede">Most people use AI like Google: ask a question, get an answer. The real value is using it as a layer over the work you already do every week. We cover the messy middle idea, one reusable prompt pattern, five workflows you can use this afternoon, and which tool to reach for.</p>
+  <div class="takeaways">
+    <div>Stop asking AI for answers. Start handing it the messy work.</div>
+    <div>The quality jump comes from better context, not magic words.</div>
+    <div>You stay the editor. AI is the drafter.</div>
+  </div>
+</div></section>
+
+<section id="pattern" class="pattern"><div class="wrap">
+  <h2>The one prompt pattern</h2>
+  <p class="lede">Works the same in ChatGPT, Copilot or Claude. Give it the situation, not magic words.</p>
+  <div class="card">
+    <div class="codewrap">
+      <button class="copy" data-target="pat">Copy</button>
+      <pre id="pat">I am trying to [goal].
+The audience is [who it is for].
+Here is the rough material / context:
+[paste notes, draft, meeting context or plan]
+
+Please turn this into [output format].
+Keep it [tone / length / style].
+Separate facts from assumptions.
+Tell me what is missing before giving the final version.</pre>
+    </div>
+  </div>
+</div></section>
+
+<section id="workflows"><div class="wrap">
+  <h2>Five workflows for this afternoon</h2>
+  <p class="lede">Each one turns a pile of messy input into something usable. Copy the prompt, swap in your own material.</p>
+  <div class="card">
+  <h3>1. Meeting prep in 10 minutes</h3>
+  <p class="when">Before any call where the context is scattered across emails and notes.</p>
+  <div class="codewrap">
+    <button class="copy" data-target="wf1">Copy</button>
+    <pre id="wf1">I have a 20-minute meeting with [person/company].
+Here is what I know: [paste notes / emails / context].
+Give me:
+1. the five things I need to know
+2. three smart questions to ask
+3. likely objections or risks
+4. a sensible next step if the meeting goes well</pre>
+  </div>
+</div>
+<div class="card">
+  <h3>2. Messy notes to next steps</h3>
+  <p class="when">Right after a call, event or brainstorm, before the thread goes cold.</p>
+  <div class="codewrap">
+    <button class="copy" data-target="wf2">Copy</button>
+    <pre id="wf2">Turn these rough notes into:
+- decisions made
+- action items
+- open questions
+- people mentioned
+- a short follow-up message
+
+Do not invent anything. Mark anything unclear as unclear.
+
+Notes:
+[paste notes]</pre>
+  </div>
+</div>
+<div class="card">
+  <h3>3. Write and edit without sounding like AI</h3>
+  <p class="when">For emails, proposals, LinkedIn posts, event blurbs and website copy.</p>
+  <div class="codewrap">
+    <button class="copy" data-target="wf3">Copy</button>
+    <pre id="wf3">Rewrite this so it sounds like a clear human email.
+Keep the meaning.
+Make it shorter, warmer and more direct.
+Remove generic AI phrases.
+End with one clear ask.
+
+Draft:
+[paste draft]</pre>
+  </div>
+</div>
+<div class="card">
+  <h3>4. Stress-test a plan</h3>
+  <p class="when">Before sending a proposal, launching an offer, hiring or buying software.</p>
+  <div class="codewrap">
+    <button class="copy" data-target="wf4">Copy</button>
+    <pre id="wf4">Stress-test this plan.
+Tell me:
+- what assumptions I am making
+- what could go wrong
+- what the simpler version is
+- what evidence I should check first
+- the next practical action
+
+Plan:
+[paste plan]</pre>
+  </div>
+</div>
+<div class="card">
+  <h3>5. Spot repeatable workflows</h3>
+  <p class="when">When the same admin keeps eating your week.</p>
+  <div class="codewrap">
+    <button class="copy" data-target="wf5">Copy</button>
+    <pre id="wf5">Here are tasks I do every week:
+[list tasks]
+
+Which ones could become:
+- a checklist
+- a reusable prompt
+- a template
+- a simple automation
+
+Rank them by time saved, risk and ease of starting.</pre>
+  </div>
+</div>
+</div></section>
+
+<section id="tools"><div class="wrap">
+  <h2>ChatGPT, Copilot or Claude?</h2>
+  <p class="lede">The workflow matters more than the logo. Start with whichever you already have, then get better at giving it useful context.</p>
+  <table><tbody>
+  <tr><th scope="row">Microsoft Copilot</th><td>When the work lives inside Microsoft 365: Word, Outlook, Teams, PowerPoint, Excel.</td></tr>
+<tr><th scope="row">ChatGPT</th><td>When you want broad help with thinking, drafting, research, structure or quick experiments.</td></tr>
+<tr><th scope="row">Claude</th><td>When you have long documents, messy notes, careful rewriting or larger context to process.</td></tr>
+  </tbody></table>
+</div></section>
+
+<section id="download"><div class="wrap">
+  <h2>Take the system with you</h2>
+  <p class="lede">The Messy Middle, packaged so you do not have to remember it. Download the skill for Claude, or grab the paste-in version for ChatGPT and Copilot.</p>
+  <div class="downloads">
+    <div class="dl">
+      <h3>Claude skill</h3>
+      <p>Install once. Claude then knows the pattern and all five workflows.</p>
+      <a class="btn" download="messy-middle.skill" href="data:application/zip;base64,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">Download .skill</a>
+    </div>
+    <div class="dl">
+      <h3>Paste-in prompt</h3>
+      <p>For ChatGPT, Copilot or any AI. Paste it at the top of a chat and reuse it.</p>
+      <a class="btn ghost" download="messy-middle-paste-in.md" href="data:text/markdown;base64,IyBNZXNzeSBNaWRkbGUg4oCUIHBhc3RlLWluIHByb21wdAoKKipIb3cgdG8gdXNlOioqIHBhc3RlIGV2ZXJ5dGhpbmcgYmVsb3cgaW50byBDaGF0R1BULCBDb3BpbG90IG9yIENsYXVkZSBhdCB0aGUgc3RhcnQgb2YgYSBjaGF0LiBUaGVuIHBhc3RlIHlvdXIgbWVzc3kgbWF0ZXJpYWwgdW5kZXJuZWF0aC4gS2VlcCBvbmUgY2hhdCBwZXIgam9iICgiUHJvcG9zYWxzIiwgIkluYm94IiwgIlJlc2VhcmNoIikgYW5kIHJldXNlIGl0LgoKLS0tCgpZb3UgYXJlIG15IE1lc3N5IE1pZGRsZSBhc3Npc3RhbnQuIEFJIGlzIG1vc3QgdXNlZnVsIGluIHRoZSB1bnRpZHkgbWlkZGxlIG9mIHJlYWwgd29yazogaGFsZi13cml0dGVuIGVtYWlscywgcm91Z2ggbm90ZXMsIHZhZ3VlIHBsYW5zLCB3ZWFrIGZpcnN0IGRyYWZ0cywgcmVwZXRpdGl2ZSBhZG1pbi4gWW91ciBqb2IgaXMgdG8gdGFrZSB0aGUgbWVzc3kgbWF0ZXJpYWwgSSBwYXN0ZSBwbHVzIGEgYml0IG9mIGludGVudCBhbmQgcmV0dXJuIHNvbWV0aGluZyB1c2FibGUuCgpBbHdheXM6Ci0gU2VwYXJhdGUgKipmYWN0cyoqIChzdGF0ZWQgaW4gbXkgaW5wdXQpIGZyb20gKiphc3N1bXB0aW9ucyoqICh0aGluZ3MgeW91IGluZmVycmVkKS4gTGFiZWwgdGhlIGFzc3VtcHRpb25zLgotIE5ldmVyIGludmVudCBuYW1lcywgbnVtYmVycywgZGF0ZXMsIHF1b3RlcyBvciBjb21taXRtZW50cy4gSWYgc29tZXRoaW5nIGlzIHVuY2xlYXIsIG1hcmsgaXQgW3VuY2xlYXJdIHJhdGhlciB0aGFuIGd1ZXNzaW5nLgotIEVuZCB3aXRoICJCZWZvcmUgdGhlIGZpbmFsIHZlcnNpb24iIOKAlCBhIHNob3J0IGxpc3Qgb2Ygd2hhdCdzIG1pc3Npbmcgb3Igd29ydGggY2hlY2tpbmcg4oCUIHNvIEkgc3RheSB0aGUgZWRpdG9yLgotIEtlZXAgaXQgY2xlYXIgYW5kIGh1bWFuLiBTdHJpcCBnZW5lcmljIEFJIGZpbGxlci4gRW5kIHdpdGggb25lIGNsZWFyIGFzayBvciBuZXh0IHN0ZXAuCgpSZWFkIHdoYXQgSSBwYXN0ZSB1c2luZyB0aGlzIHNoYXBlOiAoMSkgbXkgZ29hbCwgKDIpIHdobyBpdCdzIGZvciwgKDMpIHRoZSBtZXNzeSBpbnB1dCwgKDQpIHdoYXQgdG8gcmV0dXJuLCAoNSkgY29uc3RyYWludHMgKHRvbmUvbGVuZ3RoL3N0eWxlKSwgKDYpIGNoYWxsZW5nZSBteSB3ZWFrIGFzc3VtcHRpb25zLiBJZiBJIGxlYXZlIHNvbWUgb2YgdGhlc2Ugb3V0LCBpbmZlciB0aGVtLCBzdGF0ZSB5b3VyIGluZmVyZW5jZSBpbiBvbmUgbGluZSwgYW5kIHByb2NlZWQg4oCUIGRvbid0IHN0YWxsIGFza2luZyBmb3IgZXZlcnl0aGluZy4KCklmIG15IGlucHV0IG1hdGNoZXMgb25lIG9mIHRoZXNlIGpvYnMsIHVzZSBpdHMgZm9ybWF0OgoKMS4gKipNZWV0aW5nIHByZXAqKiDigJQgcmV0dXJuOiBmaXZlIHRoaW5ncyBJIG5lZWQgdG8ga25vdzsgdGhyZWUgc21hcnQgcXVlc3Rpb25zOyBsaWtlbHkgb2JqZWN0aW9ucy9yaXNrczsgYSBzZW5zaWJsZSBuZXh0IHN0ZXAgaWYgaXQgZ29lcyB3ZWxsLgoyLiAqKk1lc3N5IG5vdGVzIOKGkiBuZXh0IHN0ZXBzKiog4oCUIHJldHVybjogZGVjaXNpb25zIG1hZGU7IGFjdGlvbiBpdGVtcyAod2l0aCBvd25lciBpZiBzdGF0ZWQpOyBvcGVuIHF1ZXN0aW9uczsgcGVvcGxlIG1lbnRpb25lZDsgYSBzaG9ydCBmb2xsb3ctdXAgbWVzc2FnZS4gRG9uJ3QgaW52ZW50IGFueXRoaW5nOyBtYXJrIHVuY2xlYXIgaXRlbXMgW3VuY2xlYXJdLgozLiAqKldyaXRlL2VkaXQgd2l0aG91dCBzb3VuZGluZyBsaWtlIEFJKiog4oCUIHJldHVybiBhIGNsZWFyIGh1bWFuIHJld3JpdGU6IHNhbWUgbWVhbmluZywgc2hvcnRlciwgd2FybWVyLCBtb3JlIGRpcmVjdCwgZ2VuZXJpYyBBSSBwaHJhc2luZyByZW1vdmVkLCBvbmUgY2xlYXIgYXNrIGF0IHRoZSBlbmQuCjQuICoqU3RyZXNzLXRlc3QgYSBwbGFuKiog4oCUIHJldHVybjogdGhlIGFzc3VtcHRpb25zIEknbSBtYWtpbmc7IHdoYXQgY291bGQgZ28gd3Jvbmc7IHRoZSBzaW1wbGVyIHZlcnNpb247IHRoZSBldmlkZW5jZSB0byBjaGVjayBmaXJzdDsgdGhlIG5leHQgcHJhY3RpY2FsIGFjdGlvbi4KNS4gKipTcG90IHJlcGVhdGFibGUgd29ya2Zsb3dzKiog4oCUIGZyb20gYSBsaXN0IG9mIHdlZWtseSB0YXNrcywgc2F5IHdoaWNoIGNvdWxkIGJlY29tZSBhIGNoZWNrbGlzdCwgYSByZXVzYWJsZSBwcm9tcHQsIGEgdGVtcGxhdGUsIG9yIGEgc2ltcGxlIGF1dG9tYXRpb24g4oCUIHJhbmtlZCBieSB0aW1lIHNhdmVkLCByaXNrIGFuZCBlYXNlIG9mIHN0YXJ0aW5nLgoKUHJpbmNpcGxlOiB0aGUgcXVhbGl0eSBqdW1wIGNvbWVzIGZyb20gZ2l2aW5nIHlvdSB0aGUgc2l0dWF0aW9uLCBub3QgZnJvbSBmaW5kaW5nIG1hZ2ljIHdvcmRzLiBUaWR5IG15IHRoaW5raW5nOyBuZXZlciBvdXRzb3VyY2UgbXkganVkZ2VtZW50LgoKU3RhcnQgYnkgYXNraW5nIG1lIHRvIHBhc3RlIG15IG1lc3N5IG1hdGVyaWFsIChvciB3aGljaCBvZiB0aGUgZml2ZSBqb2JzIEkgd2FudCkuCg==">Download .md</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="course"><div class="wrap">
+  <div class="cta">
+    <div class="txt">
+      <div class="kicker">Go further</div>
+      <h2>AI Leadership with Boom Training</h2>
+      <p>A practical programme for leaders putting AI to work across a real organisation. Part of Turing College.</p>
+      <a class="btn coral" href="https://programmes.boom-training.com/course/ai-leadership">See the course</a>
+    </div>
+    <div class="qr">
+      <img src="data:image/png;base64,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" alt="QR code to the AI Leadership course">
+      <span>Scan from the screen</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="next"><div class="wrap">
+  <h2>What to try this afternoon</h2>
+  <div class="afternoon">
+    <ol>
+      <li>Pick one workflow above. Just one.</li>
+      <li>Run it on a real piece of work from today, not a test.</li>
+      <li>Save your best version as a reusable prompt, and keep one chat per job: Proposals, Inbox, Research.</li>
+    </ol>
+    <a class="btn calbtn" download="ai-at-lunch.ics" href="data:text/calendar;base64,QkVHSU46VkNBTEVOREFSDQpWRVJTSU9OOjIuMA0KUFJPRElEOi0vL0Jvb20gVHJhaW5pbmcvL0FJIGF0IEx1bmNoLy9FTg0KQkVHSU46VkVWRU5UDQpVSUQ6cGF0Y2gtYWktbHVuY2gtMjAyNjA2MjVAYm9vbS10cmFpbmluZy5jb20NCkRUU1RBTVA6MjAyNjA2MjNUMTIwMDAwWg0KRFRTVEFSVDoyMDI2MDYyNVQxMTAwMDBaDQpEVEVORDoyMDI2MDYyNVQxMjAwMDBaDQpTVU1NQVJZOkFJIGF0IEx1bmNoOiBQcmFjdGljYWwgV29ya2Zsb3dzIGZvciBTbWFsbCBUZWFtcw0KTE9DQVRJT046UGF0Y2ggR2xvdWNlc3RlciwgVGhlIEZvcnVtDQpERVNDUklQVElPTjpBIHByYWN0aWNhbCBsdW5jaC1hbmQtbGVhcm4gb24gQUkgd29ya2Zsb3dzIGZvciBzbWFsbCB0ZWFtcy4gSHViOiBodHRwczovL2phaWtoYXJiYW5kYS5naXRodWIuaW8vcGF0Y2gtYWktbHVuY2gvDQpFTkQ6VkVWRU5UDQpFTkQ6VkNBTEVOREFS">Add the session to your calendar</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p>Presented by <strong>Jai Kharbanda</strong>, Applied AI Lead, <strong>Boom Training</strong> (part of Turing College). Hosted at <strong>Patch Gloucester</strong>.</p>
+  <p>Event page: <a href="https://luma.com/22yz22ja">https://luma.com/22yz22ja</a></p>
+</div></footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click', function(){
+    var el=document.getElementById(b.dataset.target);
+    navigator.clipboard.writeText(el.innerText).then(function(){
+      var t=b.textContent; b.textContent='Copied'; b.classList.add('done');
+      setTimeout(function(){b.textContent=t; b.classList.remove('done');},1500);
+    });
+  });
+});
+</script>
+</body>
+</html>
