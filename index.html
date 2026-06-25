@@ -96,6 +96,24 @@ pre{background:#0f1830;color:#e8ecf6;border-radius:10px;padding:16px;overflow-x:
 .cta .qr span{display:block;font-size:.78rem;color:#9DB2E8;margin-top:6px}
 
 .week{background:#f3eee5;border-radius:14px;padding:22px}
+.progintro{display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:14px;padding:22px 24px;margin-bottom:20px}
+.progintro p{margin:0;max-width:48ch;color:#d7deec}
+.progintro .fund{color:#9DB2E8;font-size:.9rem;margin-top:6px}
+.progintro .qr-light{text-align:center}
+.progintro .qr-light img{width:104px;height:104px;border-radius:8px;background:#fff;padding:6px}
+.progintro .qr-light span{display:block;font-size:.74rem;color:#9DB2E8;margin-top:6px}
+.courses{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.course{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 4px 14px rgba(22,35,61,.04);display:flex;flex-direction:column}
+.course .cat{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.course h3{font-size:1.22rem;margin:3px 0 0}
+.course .meta{color:var(--blue);font-weight:600;font-size:.85rem;margin:2px 0 10px}
+.course p{color:var(--ink2);margin:0 0 10px;font-size:.95rem}
+.course .who{font-size:.85rem;color:var(--muted);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.chip{font-size:.74rem;background:#eef1f8;color:var(--ink2);border-radius:999px;padding:3px 10px}
+.course .actions{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+.btn.sm{padding:9px 15px;font-size:.9rem}
+@media(max-width:620px){ .courses{grid-template-columns:1fr} }
 .getkit-row{display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:18px}
 .formurl{margin:10px 0 0;color:var(--muted);font-size:.9rem}
 .qr-light{text-align:center}
@@ -137,8 +155,8 @@ footer a{color:#cdd6e8}
 <div class="wrap">
   <nav class="quick">
     <a href="#pillars">The 3 pillars<span>The operating model</span></a>
-    <a href="#groundtruth">Ground-truth doc<span>Start it today</span></a>
     <a href="#download">Free download<span>The Context Pack</span></a>
+    <a href="#programmes">Funded courses<span>Apply or view syllabus</span></a>
   </nav>
 </div>
 
@@ -239,18 +257,68 @@ Use only my real data. Show your working and flag anything you assumed.</pre>
   </div>
 </div></section>
 
-<section id="getkit"><div class="wrap">
-  <h2>Get the kit and stay in touch</h2>
-  <p class="lede">Want the deck, the ground-truth template and today's demo files emailed over, plus the occasional practical AI tip? Leave your name, company and email and we'll send it across.</p>
-  <div class="getkit-row">
+<section id="programmes"><div class="wrap">
+  <h2>Want to go further? Train your team, funded.</h2>
+  <p class="lede">A units pathway for leaders, and three full apprenticeships for your team. Built and delivered by Boom Training, part of Turing College.</p>
+  <div class="progintro">
     <div>
-      <a class="btn" href="https://tsociety.typeform.com/to/PlQj2Pqd">Send me the kit</a>
-      <p class="formurl">or go to <a href="https://tsociety.typeform.com/to/PlQj2Pqd">tsociety.typeform.com/to/PlQj2Pqd</a></p>
+      <p>Apply directly below, or scan to browse every programme. Up to 100% funded through the UK Growth &amp; Skills Levy.</p>
+      <p class="fund">Levy-funded for eligible UK employers: free at the point of use. Not eligible? A small co-pay keeps it affordable.</p>
     </div>
     <div class="qr-light">
-      <img src="data:image/png;base64,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" alt="QR code to the sign-up form">
-      <span>Scan to sign up</span>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYYAAAGGCAIAAADw4rGyAAAIrklEQVR4nO3cy5EjRRRAUUSMDziAHRg/duAAVhRLgk1qmCT73Sqds+2QVKXPjVy8fq/run4BaPh1+gIA/iFJQIgkASGSBIRIEhAiSUCIJAEhkgSESBIQ8m39599+/+NrruPL/PXn959+7PrdWD/zucfuOPe6U+/G1Od7zqf9Bp2SgBBJAkIkCQiRJCBEkoAQSQJCJAkIkSQgRJKAkDfT22tT86xrU7POO4+dmpOemlf+tEnoc+/z836DTklAiCQBIZIEhEgSECJJQIgkASGSBIRIEhAiSUDI1vT2WnOK+pzmhuyprd5rO9f8aZ/+jjv+Bp2SgBBJAkIkCQiRJCBEkoAQSQJCJAkIkSQgRJKAkIPT288ztan6nHNz4TvObSI/t6d87Y7fjSlOSUCIJAEhkgSESBIQIklAiCQBIZIEhEgSECJJQIjp7X/ZmdCd2r7cnMBe23nd5pZr/i9OSUCIJAEhkgSESBIQIklAiCQBIZIEhEgSECJJQMjB6e077hu+4zWv7dzRuRnrO+7tbs7BrzWvas0pCQiRJCBEkoAQSQJCJAkIkSQgRJKAEEkCQiQJCNma3n7eFuSdCV2P/ZrHru287jnn7vd5v0GnJCBEkoAQSQJCJAkIkSQgRJKAEEkCQiQJCJEkIOR1Xdf0NYScm4WdmtCd2r58brZ77Y6T0HfckH2OUxIQIklAiCQBIZIEhEgSECJJQIgkASGSBIRIEhCytXt77XkzuCawf9zU7u1zz7xjalq9+W6sOSUBIZIEhEgSECJJQIgkASGSBIRIEhAiSUCIJAEhW7u3z+1Xbs6kNu937Y6T32vP+3zXPm0juFMSECJJQIgkASGSBIRIEhAiSUCIJAEhkgSESBIQ8mZ6e2pydK052z2lucf6eZPQd3zdteZVOSUBIZIEhEgSECJJQIgkASGSBIRIEhAiSUCIJAEhW9PbUxujm9O9O+44Gdyc7J/S/I+C5me0vl+nJCBEkoAQSQJCJAkIkSQgRJKAEEkCQiQJCJEkIOTN9Pba1Hz2jufNSU/twF77tPtdm3rdKTufvlMSECJJQIgkASGSBIRIEhAiSUCIJAEhkgSESBIQsrV7e8e5fcM7njfr3HTH+21umt/RfF2nJCBEkoAQSQJCJAkIkSQgRJKAEEkCQiQJCJEkIOTb+s/npmybO5J3NK+5OXG+tvPdOPfMU1e1Y+p/JOzeBh5CkoAQSQJCJAkIkSQgRJKAEEkCQiQJCJEkIOTN9PaOnVnY5qTsuavaed0pU1c1NXE+Nds9Zeq/EZySgBBJAkIkCQiRJCBEkoAQSQJCJAkIkSQgRJKAkK3p7XMTq1Pz2c392edM7bHeeea1O97R1Gz31C9l/VinJCBEkoAQSQJCJAkIkSQgRJKAEEkCQiQJCJEkIOTN9Pa5eeVzE6vnJrCnNjfvaO4LX7/uua3ta1PfybXm5Pc5TklAiCQBIZIEhEgSECJJQIgkASGSBIRIEhAiSUDI1u7tc/t3zz127Xnbl8+9G+c8b165+b2ampJfc0oCQiQJCJEkIESSgBBJAkIkCQiRJCBEkoAQSQJCXtd1Lf7c3L09NRd+ztS0evN+1573+e6Y+m6ce5+dkoAQSQJCJAkIkSQgRJKAEEkCQiQJCJEkIESSgJCx3dtrd9y9PTU33NwIfm5eubnTvfn53pFTEhAiSUCIJAEhkgSESBIQIklAiCQBIZIEhEgSELI1vT01J73WnME9Z+eOpt6rc3PhzW3x575XU/P35+7IKQkIkSQgRJKAEEkCQiQJCJEkIESSgBBJAkIkCQjZmt5em5qEntr6fO6xO3Ze93l7rHc056TP7aGf+hSckoAQSQJCJAkIkSQgRJKAEEkCQiQJCJEkIESSgJDXdV0//eA7zoY2dzM/bxL63B19mud9guvHOiUBIZIEhEgSECJJQIgkASGSBIRIEhAiSUCIJAEhb3ZvT83gPm/293lXNTWtPvXMU6beq53H7lyVUxIQIklAiCQBIZIEhEgSECJJQIgkASGSBIRIEhCytXt77Y4Tus0Z6+c5N0XdnN6euqrm99nubeA2JAkIkSQgRJKAEEkCQiQJCJEkIESSgBBJAkLe7N5ea85nn9sn/byN4DuaM8fN78aUqe+z3dvAQ0gSECJJQIgkASGSBIRIEhAiSUCIJAEhkgSEvJnevuN8dnP39vO2TTc/wR07r7tzv83/VZjilASESBIQIklAiCQBIZIEhEgSECJJQIgkASGSBIS8rus69NRT073NedY7bn2emu6duqNP263e3MztlASESBIQIklAiCQBIZIEhEgSECJJQIgkASGSBIS82b2949wm43OPbc4Nn3vdtamJ5OY133HX+M7O7ylOSUCIJAEhkgSESBIQIklAiCQBIZIEhEgSECJJQMib6e3mfOeOqbnwKc1N5DumJqGbm8in7vdcGZySgBBJAkIkCQiRJCBEkoAQSQJCJAkIkSQgRJKAkK3d23ec7l07t0HZHusfN7WL+nmf4B05JQEhkgSESBIQIklAiCQBIZIEhEgSECJJQIgkASFb09tr56Zdm/OsU1uuz80cTz1z87E7z7x+r+644f7cO+mUBIRIEhAiSUCIJAEhkgSESBIQIklAiCQBIZIEhByc3r6jnd3MO8/8aTuhm5P95z795nvV5JQEhEgSECJJQIgkASGSBIRIEhAiSUCIJAEhkgSEmN7+D6a2TTdNzTp/2jTzOc3d6k5JQIgkASGSBIRIEhAiSUCIJAEhkgSESBIQIklAyMHp7TvOK+/Ms5577Dl3vOa1O852T81JN/8bwSkJCJEkIESSgBBJAkIkCQiRJCBEkoAQSQJCJAkIeV3XtfjzHWdh16amXXdM7UhufvrNa77j92rK+r1ySgJCJAkIkSQgRJKAEEkCQiQJCJEkIESSgBBJAkLeTG8DfCWnJCBEkoAQSQJCJAkIkSQgRJKAEEkCQiQJCJEkIORvfpOs+X9HcFIAAAAASUVORK5CYII=" alt="QR code to all programmes">
+      <span>Scan: all programmes</span>
     </div>
+  </div>
+  <div class="courses">
+  <div class="course">
+    <div class="cat">For owners &amp; leaders</div>
+    <div class="ptop"><h3>AI Leadership — individual units</h3></div>
+    <div class="meta">30 hrs per unit · 3 units</div>
+    <p>For leaders who can&#x27;t take 18 months out. Fund individual units through your levy. The Discover, Design and Implement modules cover the whole arc of putting AI to work across the business.</p>
+    <p class="who"><strong>Who it's for:</strong> Founders, MDs and senior leaders who want strategic AI fluency without committing to a full programme.</p>
+    <div class="chips"><span class="chip">AI strategy</span><span class="chip">Procurement</span><span class="chip">Governance</span><span class="chip">Adoption</span><span class="chip">Change management</span></div>
+    <div class="actions">
+      <a class="btn sm" href="https://tsociety.typeform.com/to/nuoW4juB">Enquire about units</a>
+      <a class="btn sm ghost" href="https://www.boom-training.com/ai-leadership">View syllabus</a>
+    </div>
+  </div>
+<div class="course">
+    <div class="cat">Data Analytics &amp; AI</div>
+    <div class="ptop"><h3>Level 4 Data Analyst</h3></div>
+    <div class="meta">15 months + 3 months EPA</div>
+    <p>Equip the people who own your numbers to build structured analytics in Excel, SQL, Python and BI tools, and turn dashboards into commercial decisions you actually act on.</p>
+    <p class="who"><strong>Who it's for:</strong> Anyone who turns data into sharper segmentation, pricing and retention decisions.</p>
+    <div class="chips"><span class="chip">Excel</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Tableau</span><span class="chip">Power BI</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Git</span></div>
+    <div class="actions">
+      <a class="btn sm" href="https://programmes.boom-training.com/course/data-analytics-ai-apprenticeship">Apply now</a>
+      <a class="btn sm ghost" href="https://www.boom-training.com/data-analytics-and-ai">View syllabus</a>
+    </div>
+  </div>
+<div class="course">
+    <div class="cat">AI for Business</div>
+    <div class="ptop"><h3>Level 3 Data Technician</h3></div>
+    <div class="meta">15 months + 3 months EPA</div>
+    <p>Teaches teams to source, blend and analyse data accurately using AI-augmented tools. Practical day-to-day productivity for the people who keep the business running.</p>
+    <p class="who"><strong>Who it's for:</strong> Coordinators and team members across operations, marketing, sales and finance who want to ship faster with AI.</p>
+    <div class="chips"><span class="chip">ChatGPT</span><span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">Claude</span><span class="chip">Google Sheets + AI</span><span class="chip">SQL + AI</span></div>
+    <div class="actions">
+      <a class="btn sm" href="https://programmes.boom-training.com/course/ai-for-business-apprenticeship">Apply now</a>
+      <a class="btn sm ghost" href="https://www.boom-training.com/ai-for-business">View syllabus</a>
+    </div>
+  </div>
+<div class="course">
+    <div class="cat">Applied AI &amp; Automation</div>
+    <div class="ptop"><h3>Level 4 AI Automation</h3><span class="badge">Most powerful</span></div>
+    <div class="meta">15 months + 3 months EPA</div>
+    <p>Spot automation opportunities, build AI-supported workflows across the business, and refine them so efficiency compounds month on month.</p>
+    <p class="who"><strong>Who it's for:</strong> Operations leads driving productivity who want their teams shipping automations into live use, not slide decks.</p>
+    <div class="chips"><span class="chip">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span><span class="chip">Lovable</span><span class="chip">n8n</span><span class="chip">Zapier</span><span class="chip">Perplexity</span></div>
+    <div class="actions">
+      <a class="btn sm" href="https://programmes.boom-training.com/course/applied-ai-automation-apprenticeship">Apply now</a>
+      <a class="btn sm ghost" href="https://www.boom-training.com/applied-ai-and-automation">View syllabus</a>
+    </div>
+  </div>
   </div>
 </div></section>
 
@@ -259,9 +327,8 @@ Use only my real data. Show your working and flag anything you assumed.</pre>
     <div class="txt">
       <div class="kicker">About Boom Training</div>
       <h2>Practical AI training that sticks</h2>
-      <p>Boom Training is the apprenticeship delivery arm of Turing College. We help teams turn AI from chat into real workflows, with hands-on, project-based training and one-to-one support.</p>
-      <p class="fund">Our AI Leadership programme is Levy-funded for eligible UK employers: free at the point of use. Not eligible? A small co-pay keeps it affordable.</p>
-      <a class="btn coral" href="https://programmes.boom-training.com/course/ai-leadership">See the AI Leadership course</a>
+      <p>Boom Training is the apprenticeship delivery arm of Turing College. We help teams turn AI from chat into real workflows, with hands-on, project-based training and one-to-one support. Y Combinator-backed, with a direct line to the frontier.</p>
+      <a class="btn coral" href="https://programmes.boom-training.com">Browse all programmes</a>
       <a class="btn" href="https://www.boom-training.com" style="margin-left:8px;background:transparent;border:1.5px solid #ffffff;color:#fff">Visit boom-training.com</a>
     </div>
     <div class="qr">
